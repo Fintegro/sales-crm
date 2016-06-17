@@ -1,0 +1,459 @@
+/*
+ * SMACSS + SCSS starter v2.1
+ * Inspired by SMACSS http://smacss.com
+ * Coding rules : https://github.com/necolas/idiomatic-css
+ *
+ * Author @antonashin
+ *
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* ===========================
+   State
+   =========================== */
+.is-left {
+  margin-left: 0 !important;
+  width: 20% !important;
+  max-width: 225px;
+  left: 75px !important;
+}
+
+.is-small {
+  width: 100px !important;
+  height: 100px !important;
+  line-height: 1;
+  margin: 5px;
+}
+.is-small .icon {
+  display: none;
+}
+
+.mask {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.errors {
+  transition: all 0.5s ease;
+}
+
+/* ===========================
+   Base
+   =========================== */
+html {
+  font-size: 112.5%;
+  line-height: 1.5em;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.disable-hover,
+.disable-hover * {
+  pointer-events: none !important;
+}
+
+body {
+  background: #004050;
+}
+
+a {
+  color: #000;
+  outline: none;
+  text-decoration: none;
+}
+a:visited {
+  color: #000;
+}
+a:hover {
+  color: #000;
+}
+a:active {
+  color: #000;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, h6, h3, h4, h5, h6 {
+  margin: 8px 0 16px;
+  padding: 0;
+}
+
+h1 {
+  font-size: 3.998rem;
+  line-height: 4.5rem;
+  margin: 16px 0 32px 0;
+  color: #000;
+  letter-spacing: 1px;
+  font-family: "Swiss721BoldCondensedBT", sans-serif;
+}
+
+h2, h3, h4, h5, h6 {
+  font-size: 2.827rem;
+  line-height: 3rem;
+  color: #000;
+  letter-spacing: 1px;
+  margin: 0 0 16px;
+}
+
+h3 {
+  font-size: 1.999rem;
+  line-height: 3rem;
+}
+
+h4 {
+  font-size: 1.414rem;
+  line-height: 1.5rem;
+}
+
+h5 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+h6 {
+  font-size: 0.707rem;
+  line-height: 1.5rem;
+}
+
+ul, ol {
+  margin-bottom: 1.5rem;
+}
+
+.span3 {
+  width: 25%;
+  float: left;
+}
+
+/* ===========================
+   Module: Login form
+   =========================== */
+.login-form {
+  width: 25rem;
+  height: 18.75rem;
+  position: fixed;
+  top: 50%;
+  margin-top: -9.375rem;
+  left: 50%;
+  margin-left: -12.5rem;
+  background-color: #ffffff;
+  opacity: 0;
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+}
+.login-form .errors {
+  margin: auto;
+  text-align: center;
+  color: red;
+}
+.login-form ul.errors {
+  margin-top: 10px;
+  position: relative;
+  top: -36px;
+  pointer-events: none;
+}
+
+/* ===========================
+   Module: Dashboard
+   =========================== */
+.double--double {
+  width: 640px !important;
+}
+
+.tile--menu,
+.tile {
+  transition: all 0.5s ease;
+}
+
+.tile-label {
+  font-size: 14px;
+  text-align: center;
+  left: auto !important;
+  width: 100%;
+}
+
+.tile-area-controls {
+  background: #565555;
+  z-index: 2;
+  padding: 0 3px;
+}
+
+.tile-area-controls {
+  position: fixed;
+  right: 40px;
+  top: 40px;
+}
+
+.tile-group {
+  left: 100px;
+}
+
+.tile, .tile-small, .tile-sqaure, .tile-wide, .tile-large, .tile-big, .tile-super {
+  opacity: 0;
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+}
+
+#charmSettings .button {
+  margin: 5px;
+}
+
+@media screen and (max-width: 640px) {
+  .tile-area {
+    overflow-y: scroll;
+  }
+
+  .tile-area-controls {
+    display: none;
+  }
+}
+@media screen and (max-width: 320px) {
+  .tile-area {
+    overflow-y: scroll;
+  }
+
+  .tile-area-controls {
+    display: none;
+  }
+}
+/* ===========================
+			Module: Lazy Load
+	 =========================== */
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../../media/preloader.gif") no-repeat 50% rgba(255, 255, 255, 0);
+  display: none;
+  z-index: 3;
+}
+#loading p {
+  position: fixed;
+  top: 55%;
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+
+/* ===========================
+   Module: Tile Content
+   =========================== */
+.ajax-is-load .tile-content-wrap {
+  float: right;
+  width: 70%;
+  height: 100%;
+  position: relative;
+  display: block;
+  padding-top: 40px;
+  overflow: auto;
+}
+.ajax-is-load .tile-content-wrap .title {
+  text-align: center;
+  color: white;
+  margin-bottom: 40px;
+}
+.ajax-is-load .tile-content-wrap table {
+  font-size: 12px;
+}
+.ajax-is-load .tile-content-wrap table thead,
+.ajax-is-load .tile-content-wrap table tfoot {
+  background: #2086BF;
+}
+.ajax-is-load .tile-content-wrap table thead th,
+.ajax-is-load .tile-content-wrap table tfoot th {
+  color: #fff;
+  font-weight: 100;
+}
+.ajax-is-load .tile-content-wrap table thead th.sorting_asc, .ajax-is-load .tile-content-wrap table thead th.sorting_desc,
+.ajax-is-load .tile-content-wrap table tfoot th.sorting_asc,
+.ajax-is-load .tile-content-wrap table tfoot th.sorting_desc {
+  background-color: #2086BF !important;
+}
+.ajax-is-load .tile-content-wrap table.striped tbody tr:nth-child(odd) {
+  background: rgba(255, 255, 255, 0.1);
+}
+.ajax-is-load .tile-content-wrap table .editButton,
+.ajax-is-load .tile-content-wrap table .removeButton {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  color: white;
+}
+.ajax-is-load .tile-content-wrap table .removeButton {
+  color: red;
+  font-size: 12px;
+}
+
+#data_table_info {
+  background: transparent;
+  font-weight: 100;
+  font-size: 12px;
+}
+
+.dataTables_length,
+.dataTables_filter {
+  font-size: 12px;
+}
+
+.dataTable .sorting_asc:after,
+.dataTable .sorting_desc:after {
+  margin-left: -15px !important;
+}
+
+.dataTable td, .dataTable th {
+  padding: .625rem 1rem !important;
+}
+
+.dataTables_filter label > input {
+  background: #565555;
+}
+
+/* ===========================
+   Module: Buttons
+   =========================== */
+.button.loading-cube {
+  line-height: 35px;
+  padding-left: 40px !important;
+}
+.button.loading-cube:after, .button.loading-cube:before {
+  left: 12px !important;
+}
+
+/* ===========================
+   Module: Pagination
+   =========================== */
+.dataTables_paginate .paginate_button.disabled,
+.dataTables_paginate .paginate_button:disabled {
+  border: none !important;
+  background-color: transparent !important;
+}
+
+.dataTables_paginate .paginate_button.active,
+.dataTables_paginate .paginate_button.current {
+  background-color: transparent !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  font-weight: bold;
+}
+
+a.paginate_button {
+  font-size: 12px !important;
+}
+
+/* ===========================
+   Module: Dialog
+   =========================== */
+.dialog {
+  transition: all 0.5s ease;
+  text-align: center;
+}
+.dialog footer {
+  margin-top: 20px;
+}
+
+/* ===========================
+   Module: Input
+   =========================== */
+.input-control ul.errors {
+  position: absolute;
+  bottom: -25px;
+  margin: auto;
+  width: 100%;
+}
+
+.input-control.modern {
+  margin: 30px 50px !important;
+}
+
+.input-control.textarea {
+  margin: .325rem 50px;
+  height: 125px !important;
+}
+
+.datepicker {
+  width: 12.25rem !important;
+  margin: 0 50px !important;
+}
+
+/* ===========================
+   Module: Filter Tables
+   =========================== */
+.filters .button {
+  width: 100%;
+  margin-top: 22px;
+}
+
+/*# sourceMappingURL=styles.css.map */

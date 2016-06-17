@@ -1,0 +1,38 @@
+<form method="<?php echo $this->modalData['form']->getMethod()?>" action="<?php echo $this->modalData['form']->getAction()?>" class="<?php echo $this->modalData['form']->getAttrib('class');?>"
+      id="<?php echo $this->modalData['form']->getAttrib('id')?>">
+
+    <div class="form-group" style="margin-top: 50px;">
+        <div class="input-control text datepicker" data-role="datepicker" data-scheme="darcula" data-other-days="true" data-week-start="1">
+            <?php echo $this->modalData['form']->getElement('date'); ?>
+            <button class="button"><span class="mif-calendar"></span></button>
+        </div>
+        <div class="input-control select">
+            <?php echo $this->modalData['form']->getElement('id_task'); ?>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="input-control modern text iconic">
+            <?php echo $this->modalData['form']->getElement('summ'); ?>
+            <span class="label">Amount</span>
+            <span class="informer">Please enter Amount</span>
+            <span class="placeholder">Amount</span>
+        </div>
+        <div class="input-control select">
+            <?php echo $this->modalData['form']->getElement('summ_curr'); ?>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="input-control modern text iconic">
+            <?php echo $this->modalData['form']->getElement('commisions'); ?>
+            <span class="label">Comission</span>
+            <span class="informer">Please enter Comission</span>
+            <span class="placeholder">Comission</span>
+        </div>
+        <div class="input-control select">
+            <?php echo $this->modalData['form']->getElement('comm_curr'); ?>
+        </div>
+    </div>
+    <?php if(isset($this->modalData['id'])){?>
+        <input type="hidden" name="id" value="<?php echo $this->modalData['id']; ?>" />
+    <?php }?>
+</form>

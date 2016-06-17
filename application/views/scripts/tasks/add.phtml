@@ -1,0 +1,38 @@
+<form method="<?php echo $this->modalData['form']->getMethod()?>" action="<?php echo $this->modalData['form']->getAction()?>" class="<?php echo $this->modalData['form']->getAttrib('class');?>"
+      id="modalForm">
+    <?php if(!isset($this->modalData['changeStatus'])){?>
+    <div class="input-control modern text iconic">
+        <?php echo $this->modalData['form']->getElement('name'); ?>
+        <span class="label">Name</span>
+        <span class="informer">Please enter Name</span>
+        <span class="placeholder">Name</span>
+    </div>
+    <div class="input-control select">
+        <?php echo $this->modalData['form']->getElement('id_project'); ?>
+    </div>
+    <?php }?>
+    
+    
+    <div class="input-control select" style="<?php
+    if(isset($this->modalData['changeStatus']))
+    {
+        echo 'margin-top:30px;';
+    }
+    else{
+        echo 'margin-left: 50px;';
+    }?>">
+        <?php echo $this->modalData['form']->getElement('id_status'); ?>
+    </div>
+
+    
+    <?php if(!isset($this->modalData['changeStatus']) && !$this->edit) {?>
+    <footer>
+        <a id="new-project" class="button primary addButton" href="<?php echo $this->url(['controller'=>$this->modalData['urlProject']['controller'],'action'=>$this->modalData['urlProject']['action']],null,true);?>">Add new project</a>
+    </footer>
+    <?php }?>
+    
+    <?php if(isset($this->modalData['id'])){?>
+        <input type="hidden" name="id" value="<?php echo $this->modalData['id']; ?>" />
+    <?php }?>
+
+</form>

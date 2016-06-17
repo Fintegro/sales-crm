@@ -1,0 +1,82 @@
+/* ===========================
+   Module: Tile Content
+   =========================== */
+
+.ajax-is-load {
+		.tile-content-wrap {
+				float: right;
+				width: 70%;
+				height: 100%;
+				position: relative;
+				display: block;
+				padding-top: 40px;
+				overflow: auto;
+
+			.title {
+				text-align: center;
+				color: white;
+				margin-bottom: 40px;
+			}
+
+				table {
+						font-size: 12px;
+
+						thead,
+						tfoot {
+								background: #2086BF;
+
+								th {
+										color: #fff;
+										font-weight: 100;
+
+										&.sorting_asc,
+										&.sorting_desc {
+												background-color: #2086BF !important;
+										}
+								}
+						}
+
+						&.striped tbody tr:nth-child(odd) {
+								background: rgba(255,255,255,0.1);
+						}
+
+					.editButton,
+					.removeButton {
+						display: inline-block;
+						width: 100%;
+						text-align: center;
+						font-size: 16px;
+						color: white;
+					}
+
+					.removeButton {
+						color: red;
+						font-size: 12px;
+					}
+				}
+		}
+}
+
+#data_table_info {
+		background: transparent;
+		font-weight: 100;
+		font-size: 12px;
+}
+
+.dataTables_length,
+.dataTables_filter {
+		font-size: 12px;
+}
+
+.dataTable .sorting_asc:after,
+.dataTable .sorting_desc:after {
+	margin-left: -15px !important;
+}
+
+.dataTable td, .dataTable th {
+	padding: .625rem 1rem !important;
+}
+
+.dataTables_filter label>input {
+	background: #565555;
+}

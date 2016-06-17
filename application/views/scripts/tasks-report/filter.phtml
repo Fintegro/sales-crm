@@ -1,0 +1,23 @@
+<div class="table-options filters">
+    <p>Filter by: </p>
+    <div class="forms">
+        <form method="<?php echo $this->filterForm->getMethod(); ?>" action="<?php echo $this->filterForm->getAction()?>"
+              class="<?php echo $this->filterForm->getAttrib('class');?>" id="table_filter">
+            <div class="grid fluid">
+                <div class="row">
+                    <div class="span3"> <?php echo $this->filterForm->getElement('currency')->getLabel();?>
+                        <div class="input-control select">
+                            <?php echo $this->filterForm->getElement('currency'); ?>
+                        </div>
+                    </div>
+                    <div class="span3"><?php echo $this->filterForm->getElement('balance')->getLabel();?>
+                        <div class="input-control select">
+                            <?php echo $this->filterForm->getElement('balance'); ?>
+                        </div>
+                    </div>
+                    <div class="span3"> <?php echo $this->filterForm->getElement('submit'); ?></div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

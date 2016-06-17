@@ -1,0 +1,28 @@
+<?php
+$this->headTitle('Login'); ?>
+<div class="login-form padding20 block-shadow">
+    <form method="<?php echo $this->form->getMethod()?>" action="<?php echo $this->form->getAction()?>">
+        <h1 class="text-light">Login</h1>
+        <hr class="thin"/>
+        <br />
+        <div class="errors">
+            <?php echo $this->errorMessage; ?>
+        </div>
+        <br />
+        <div class="input-control text full-size" data-role="input">
+            <?php echo $this->form->getElement('username'); ?>
+            <button class="button helper-button clear"><span class="mif-cross"></span></button>
+        </div>
+        <br />
+        <br />
+        <div class="input-control password full-size" data-role="input">
+            <?php echo $this->form->getElement('password'); ?>
+            <button class="button helper-button reveal"><span class="mif-looks"></span></button>
+        </div>
+        <br />
+        <br />
+        <div class="form-actions">
+            <?php echo $this->form->getElement('login'); ?>
+        </div>
+    </form>
+</div>

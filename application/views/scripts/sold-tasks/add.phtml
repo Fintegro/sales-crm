@@ -1,0 +1,45 @@
+  <form method="<?php echo $this->modalData['form']->getMethod()?>" action="<?php echo $this->modalData['form']->getAction()?>" class="<?php echo $this->modalData['form']->getAttrib('class');?>"
+              id="modalForm">
+      <div class="form-group" style="margin-top:50px">
+
+              <div class="input-control select">
+                  <?php echo $this->modalData['form']->getElement('id_task'); ?>
+              </div>
+
+
+          <div class="input-control text datepicker" data-role="datepicker" data-scheme="darcula" data-other-days="true" data-week-start="1">
+              <?php echo $this->modalData['form']->getElement('date'); ?>
+              <button class="button"><span class="mif-calendar"></span></button>
+          </div>
+      
+      </div>
+      
+      <div class="form-group">
+          <div class="input-control modern text iconic">
+              <?php echo $this->modalData['form']->getElement('rate'); ?>
+              <span class="label">Rate</span>
+              <span class="informer">Please enter rate</span>
+              <span class="placeholder">Rate*</span>
+          </div>
+          <div class="input-control select">
+              <?php echo $this->modalData['form']->getElement('rate_curr'); ?>
+          </div>
+
+          <div class="input-control modern text iconic">
+              <?php echo $this->modalData['form']->getElement('hours'); ?>
+              <span class="label">Hours</span>
+              <span class="informer">Please enter count of hours</span>
+              <span class="placeholder">Hours*</span>
+          </div>
+      </div>
+      
+
+            <?php if(isset($this->modalData['id'])){?>
+                <input type="hidden" name="id" value="<?php echo $this->modalData['id']; ?>" />
+            <?php }?>
+
+            <footer>
+                <a id="new-project" class="button primary addButton" href="<?php echo $this->url(['controller'=>$this->modalData['urlTask']['controller'],'action'=>$this->modalData['urlTask']['action']],null,true);?>">Add new task</a>
+            </footer>
+
+  </form>

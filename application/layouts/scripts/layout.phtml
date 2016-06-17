@@ -1,0 +1,44 @@
+<?php 
+$this->headMeta()->appendHttpEquiv('Content-Type', 'text/html;charset=utf-8');
+$this->headTitle()->setSeparator(' - ');
+$this->headTitle('');
+
+echo $this->doctype(); ?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Fintegro sales CRM">
+    <meta name="keywords" content="Fintegro sales CRM">
+    <meta name="author" content="Fintegro Company">
+    <?php echo $this->headMeta(); ?> 
+    <?php echo $this->headTitle(); ?>
+    <?php  $this->headLink()->appendStylesheet($this->baseUrl().'/css/site.css'); ?>
+    <?php echo $this->headLink()->appendStylesheet($this->baseUrl().'/css/build/styles.min.css'); ?>
+
+    <link rel="stylesheet" href="https://cdn.rawgit.com/olton/Metro-UI-CSS/master/build/css/metro.min.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/olton/Metro-UI-CSS/master/build/css/metro-responsive.min.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/olton/Metro-UI-CSS/master/build/css/metro-schemes.min.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/olton/Metro-UI-CSS/master/build/css/metro-icons.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/olton/Metro-UI-CSS/master/build/js/metro.min.js"></script>
+    <script src="//cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>    
+    <?php  $this->headScript()->appendFile($this->baseUrl().'/js/functions.js'); ?>
+    <?php  $this->headScript()->appendFile($this->baseUrl().'js/build/common.min.js'); ?>
+    <?php echo $this->headScript()->appendFile($this->baseUrl().'/js/scripts.js'); ?>
+
+</head>
+<body>
+<?php
+       $auth = Zend_Auth::getInstance();
+
+        if($auth->hasIdentity())
+        {
+            echo $this->partial('partials/navigation.phtml',['role'=>$auth->getStorage()->read()['role']]);
+        }
+?>
+<div id="content" class="">
+    <?php echo $this->layout()->content; ?>
+</div>
+</body>
+</html>

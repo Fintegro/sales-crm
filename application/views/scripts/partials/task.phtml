@@ -1,0 +1,25 @@
+<tr>
+    <td><?php echo $this->escape($this->name);?></td>
+	<td>
+		<?php
+			$projects = new Application_Model_DbTable_Projects();
+			$result = $projects->getProjectNameById($this->id_project);
+			echo $result;
+		?>
+	</td>
+	<td>
+		<?php
+			$status = new Application_Model_DbTable_Status();
+			$result = $status->getStatusNameById($this->id_status);
+			echo $result;
+		?>
+	</td>
+	<!--<td>
+		 <?php echo $this->partialLoop('partials/inprogress.phtml', $this->tasks);?>
+	</td>-->
+    <td>
+		<a href="<?php echo $this->url(array('controller'=>'inprogress', 'action'=>'index', 'id_task'=>$this->id));?>">Show workers</a>
+        <a href="<?php echo $this->url(array('controller'=>'tasks', 'action'=>'edit', 'id'=>$this->id));?>">Redact</a>
+        <a href="<?php echo $this->url(array('controller'=>'tasks', 'action'=>'delete', 'id'=>$this->id));?>">Delete</a>
+    </td>
+</tr>

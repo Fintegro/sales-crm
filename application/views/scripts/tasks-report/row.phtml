@@ -1,0 +1,16 @@
+<tr>
+    <?php
+    foreach ($this->row as $key=>$value)
+    {
+        if($key=='project_rate')
+        {
+            echo '<td rowspan="'.$this->row_counts[$this->row['project']]. '">' . $value.'</td>';
+        }
+        else
+        {
+            echo '<td>' . $value.'</td>';
+        }
+
+    }
+    ?>
+</tr>

@@ -1,0 +1,7 @@
+<form method="post" action="<?php $this->url(array('controller'=>'in-progress', 'action'=>'edit-cell'),null,true);?>" id="editForm">
+    <?php echo $this->partial('in-progress/partials/'.$this->partialForm.'.phtml',['formData'=>$this->inputForm,'input'=>$this->hiddens[0]['value']]); ?>
+    <?php foreach($this->hiddens as $hidden){?>
+        <input type="hidden" name="<?php echo $hidden['name'] ?>" value="<?php echo $hidden['value']; ?>" />
+    <?php }?>
+    <input type="submit" value="Send">
+</form>

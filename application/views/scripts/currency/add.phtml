@@ -1,0 +1,17 @@
+<form method="<?php echo $this->modalData['form']->getMethod()?>" action="<?php echo $this->modalData['form']->getAction()?>" class="<?php echo $this->modalData['form']->getAttrib('class');?>" id = "<?php echo $this->modalData['form']->getAttrib('id'); ?>">
+
+    <div class="input-control modern text iconic">
+        <?php echo $this->modalData['form']->getElement('ISO_code'); ?>
+        <span class="label">ISO code</span>
+        <span class="informer">Please enter new currency</span>
+        <span class="placeholder">ISO code</span>
+    </div>
+
+    <!--<div class="col-md-8 col-md-offset-4">
+        <?php /*echo $this->modalData['form']->getElement('submit');*/ ?>
+        <a class="btn btn-default" href="<?php /*echo $this->url(['controller'=>$this->url['controller'],'action'=>$this->url['action']],null,true);*/?>">Back</a>
+    </div>-->
+    <?php if(isset($this->modalData['id'])){?>
+        <input type="hidden" name="id" value="<?php echo $this->modalData['id']; ?>" />
+    <?php }?>
+</form>

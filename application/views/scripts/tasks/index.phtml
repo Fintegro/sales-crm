@@ -1,0 +1,5 @@
+<h1 class="title"><?php echo $this->title; ?></h1>
+<?php
+    echo $this->partial('partials/listtable.phtml',['columns'=>$this->columns, 'addButton'=>$this->addButton, 'addUrl'=>$this->addUrl,
+    'rows'=>$this->rows,'edits'=>$this->edits, 'change'=>$this->change]);
+?>

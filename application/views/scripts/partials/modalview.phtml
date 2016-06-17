@@ -1,0 +1,15 @@
+<div class="container">
+    <h1><?php echo $this->modalTitle; ?></h1>
+    
+        <?php $data = ['modalData'=>$this->modalData];
+            if(isset($this->edit))
+            {
+                $data['edit']=$this->edit;
+            }
+        echo $this->partial($this->modalView.'.phtml', $data); ?>    
+    <footer>
+        <input type="submit" class="button success sendButton" form="<?php echo $this->form; ?>" value="<?php echo $this->confirmButton; ?>">
+        <button class="button warning close-dialog"><?php echo $this->closeButton; ?></button>
+    </footer>
+</div>
+<span class="dialog-close-button close-dialog"></span>

@@ -1,0 +1,37 @@
+<div class="table-options filters">
+    <p>Filter by: </p>
+    <div class="forms">
+
+        <form method="<?php echo $this->filterForm->getMethod(); ?>" action="<?php echo $this->filterForm->getAction()?>"
+              class="<?php echo $this->filterForm->getAttrib('class');?>" id="table_filter">
+            <div class="grid fluid">
+                <div class="row">
+                    <div class="span3"><?php echo $this->filterForm->getElement('id_programmist')->getLabel();?>
+                        <div class="input-control select">
+                            <?php echo $this->filterForm->getElement('id_programmist'); ?>
+                        </div>
+                    </div>
+                    <div class="span3"><?php echo $this->filterForm->getElement('tasks')->getLabel();?><br>
+                        <div class="input-control select">
+                            <?php echo $this->filterForm->getElement('tasks'); ?>
+                        </div>
+                    </div>
+
+                    <div class="span3">
+                            <?php echo $this->filterForm->getElement('date'); ?>
+                    </div>
+                    
+<!--                  <div class="span3">--><?php //echo $this->filterForm->getElement('date')->getLabel();?><!--<br>-->
+<!--                        <div class="input-control text datepicker" data-role="datepicker" data-scheme="darcula" data-other-days="false" data-week-start="1"-->
+<!--                             data-multi-select="true" data-min-date="2016-04-02" data-max-date="2016-04-27">-->
+<!--                            --><?php //echo $this->filterForm->getElement('date'); ?>
+<!--                            <!--<span class="mif-cross"></span>-->
+<!--                            <button class="button" style="width:auto" "><span class="mif-calendar"></span></button>-->
+<!--                        </div>-->
+<!--                    </div>             -->
+                    <div class="span3"> <?php echo $this->filterForm->getElement('submit'); ?></div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

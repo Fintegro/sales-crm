@@ -1,0 +1,198 @@
+<div class="charm right-side padding20 bg-grayDark" id="charmSearch">
+	<button class="square-button bg-transparent fg-white no-border place-right small-button" onclick="showSearch()"><span class="mif-cross"></span></button>
+	<h1 class="text-light">Search</h1>
+	<hr class="thin"/>
+	<br />
+	<div class="input-control text full-size">
+		<label>
+			<span class="dropdown-toggle drop-marker-light">Anywhere</span>
+			<ul class="d-menu" data-role="dropdown">
+				<li><a onclick="setSearchPlace(this)">Anywhere</a></li>
+				<li><a onclick="setSearchPlace(this)">Options</a></li>
+				<li><a onclick="setSearchPlace(this)">Files</a></li>
+				<li><a onclick="setSearchPlace(this)">Internet</a></li>
+			</ul>
+		</label>
+		<input type="text">
+		<button class="button"><span class="mif-search"></span></button>
+	</div>
+</div>
+
+<div class="charm right-side padding20 bg-grayDark" id="charmSettings">
+	<button class="square-button bg-transparent fg-white no-border place-right small-button" onclick="showSettings()"><span class="mif-cross"></span></button>
+	<h1 class="text-light">Settings</h1>
+	<hr class="thin"/>
+	<br />
+	<div class="schemeButtons">
+		<div class="button square-button tile-area-scheme-dark" data-scheme="dark"></div>
+		<div class="button square-button tile-area-scheme-darkBrown" data-scheme="darkBrown"></div>
+		<div class="button square-button tile-area-scheme-darkCrimson" data-scheme="darkCrimson"></div>
+		<div class="button square-button tile-area-scheme-darkViolet" data-scheme="darkViolet"></div>
+		<div class="button square-button tile-area-scheme-darkMagenta" data-scheme="darkMagenta"></div>
+		<div class="button square-button tile-area-scheme-darkCyan" data-scheme="darkCyan"></div>
+		<div class="button square-button tile-area-scheme-darkCobalt" data-scheme="darkCobalt"></div>
+		<div class="button square-button tile-area-scheme-darkTeal" data-scheme="darkTeal"></div>
+		<div class="button square-button tile-area-scheme-darkEmerald" data-scheme="darkEmerald"></div>
+		<div class="button square-button tile-area-scheme-darkGreen" data-scheme="darkGreen"></div>
+		<div class="button square-button tile-area-scheme-darkOrange" data-scheme="darkOrange"></div>
+		<div class="button square-button tile-area-scheme-darkRed" data-scheme="darkRed"></div>
+		<div class="button square-button tile-area-scheme-darkPink" data-scheme="darkPink"></div>
+		<div class="button square-button tile-area-scheme-darkIndigo" data-scheme="darkIndigo"></div>
+		<div class="button square-button tile-area-scheme-darkBlue" data-scheme="darkBlue"></div>
+		<div class="button square-button tile-area-scheme-lightBlue" data-scheme="lightBlue"></div>
+		<div class="button square-button tile-area-scheme-lightTeal" data-scheme="lightTeal"></div>
+		<div class="button square-button tile-area-scheme-lightOlive" data-scheme="lightOlive"></div>
+		<div class="button square-button tile-area-scheme-lightOrange" data-scheme="lightOrange"></div>
+		<div class="button square-button tile-area-scheme-lightPink" data-scheme="lightPink"></div>
+		<div class="button square-button tile-area-scheme-grayed" data-scheme="grayed"></div>
+	</div>
+</div>
+
+<div class="tile-area tile-area-scheme-dark fg-white">
+
+	<div id="loading"></div>
+
+	<div class="tile-group double tile--general">
+		<span class="tile-group-title">General</span>
+
+		<div class="tile-container">
+
+			<div class="tile bg-indigo fg-white" data-role="tile">
+				<div class="tile-content iconic">
+					<span class="icon mif-calendar"></span>
+				</div>
+				<span class="tile-label">Calendar</span>
+			</div>
+
+			<div class="tile bg-darkBlue fg-white" data-role="tile">
+				<div class="tile-content iconic">
+					<span class="icon mif-envelop"></span>
+				</div>
+				<span class="tile-label">Inbox</span>
+			</div>
+
+			<div class="tile-large bg-steel fg-white" data-role="tile">
+				<div class="tile-content" style="background: url(<?php echo $this->baseUrl() . "/media/clouds2.png"; ?>) top left no-repeat; background-size: cover">
+					<div class="padding10">
+						<h1>57°</h1>
+						<h2>San Francisco</h2>
+						<h5>Party Cloudy</h5>
+						<p class="tertiary-text fg-white no-margin">Today</p>
+						<p class="tertiary-text fg-white no-margin">63°/55° Mostly Clear</p>
+						<p class="tertiary-text fg-white no-margin">Tomorrow</p>
+						<p class="tertiary-text fg-white no-margin">64°/54° Mostly Clear</p>
+					</div>
+				</div>
+				<span class="tile-label">Weather</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="tile-group double double--double tile--menu">
+		<span class="tile-group-title">Some section</span>
+		<div class="tile-container">
+			<a href="<?php echo $this->url(array('controller'=>'employees', 'action'=>'index'));?>" class="tile bg-teal fg-white load-tile-content">
+				<div class="tile-content iconic">
+					<span class="icon mif-pencil"></span>
+				</div>
+				<span class="tile-label">Show employees list</span>
+			</a>
+			<a href="<?php echo $this->url(array('controller'=>'currency','action'=>'index')); ?>" class="tile bg-darkGreen fg-white load-tile-content">
+				<div class="tile-content iconic">
+					<span class="icon mif-shopping-basket"></span>
+				</div>
+				<span class="tile-label">Show currencies list</span>
+			</a>
+			<a href="<?php echo $this->url(array('controller'=>'currency', 'action'=>'currency-rate'));?>" class="tile bg-cyan fg-white load-tile-content">
+				<div class="tile-content iconic">
+					<span class="icon mif-user-md"></span>
+				</div>
+				<div class="tile-label">Show currency exchange list</div>
+			</a>
+			<a href="<?php echo $this->url(array('controller'=>'projects','action'=>'index'));?>" class="tile bg-darkBlue fg-white load-tile-content">
+				<div class="tile-content iconic">
+					<span class="icon mif-cloud"></span>
+				</div>
+				<span class="tile-label">Show projects list</span>
+			</a>
+			<a href="<?php echo $this->url(array('controller'=>'clients','action'=>'index'));?>" class="tile bg-red fg-white load-tile-content">
+				<div class="tile-content iconic">
+					<span class="icon mif-directions-bike"></span>
+				</div>
+				<span class="tile-label">Show clients list</span>
+			</a>
+			<a href="<?php echo $this->url(array('controller'=>'tasks','action'=>'index'));?>" class="tile bg-olive fg-white load-tile-content">
+				<div class="tile-content iconic">
+					<span class="icon mif-user"></span>
+				</div>
+				<span class="tile-label">Show tasks list</span>
+			</a>
+			<a href="<?php echo $this->url(array('controller'=>'sold-tasks','action'=>'index'));?>" class="tile bg-dark fg-white load-tile-content">
+				<div class="tile-content iconic">
+					<span class="icon mif-bug"></span>
+				</div>
+				<span class="tile-label">Show sold tasks list</span>
+			</a>
+			<a href="<?php echo $this->url(array('controller'=>'payments','action'=>'index'));?>" class="tile bg-steel fg-white load-tile-content">
+				<div class="tile-content iconic">
+					<span class="icon mif-visa"></span>
+				</div>
+				<span class="tile-label">Received Payments</span>
+			</a>
+			<a href="<?php echo $this->url(array('controller'=>'projects-report','action'=>'index')); ?>" class="tile bg-darkOrange fg-white load-tile-content">
+				<div class="tile-content iconic">
+					<span class="icon mif-chart-pie"></span>
+				</div>
+				<span class="tile-label">Balance by projects</span>
+			</a>
+            <a href="<?php echo $this->url(array('controller'=>'tasks-report','action'=>'index')); ?>" class="tile bg-indigo fg-white load-tile-content">
+                <div class="tile-content iconic">
+                    <span class="icon mif-chart-pie"></span>
+                </div>
+                <span class="tile-label">Task Report</span>
+            </a>
+			<a href="<?php echo $this->url(array('controller'=>'programmers-report','action'=>'monthly')); ?>" class="tile bg-emerald fg-white load-tile-content">
+				<div class="tile-content iconic">
+					<span class="icon mif-chart-pie"></span>
+				</div>
+				<span class="tile-label">Monthly Programmers Report</span>
+			</a>
+			<a href="<?php echo $this->url(array('controller'=>'work-done-report','action'=>'index')); ?>" class="tile bg-cyan fg-white load-tile-content">
+				<div class="tile-content iconic">
+					<span class="icon mif-chart-pie"></span>
+				</div>
+				<span class="tile-label">Work Done</span>
+			</a>
+			<a href="<?php echo $this->url(array('controller'=>'in-progress','action'=>'index')); ?>" class="tile bg-cyan fg-white load-tile-content">
+				<div class="tile-content iconic">
+					<span class="icon mif-chart-pie"></span>
+				</div>
+				<span class="tile-label">Work in Progress</span>
+			</a>
+
+		</div>
+	</div>
+
+	<div class="tile-content-wrap"></div>
+</div>
+
+<style>
+	.charm.right-side {
+		width: 300px;
+		right: -300px;
+	}
+</style>
+<script>
+	/**
+	 * Get Metro start page functions
+	 */
+	$.ajax({
+		method: 'GET',
+		url: "/js/indexMetro.js",
+		error: function () {
+			console.log('Metro interface is not activate');
+		}
+	});
+</script>
+
+<div class="mask"></div>

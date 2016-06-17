@@ -1,0 +1,21 @@
+/* ===========================
+   Module: Pagination
+   =========================== */
+
+.dataTables_paginate .paginate_button.disabled,
+.dataTables_paginate .paginate_button:disabled {
+		border: none !important;
+		background-color: transparent !important;
+}
+
+.dataTables_paginate .paginate_button.active,
+.dataTables_paginate .paginate_button.current {
+		background-color: transparent !important;
+		border-top: none !important;
+		border-bottom: none !important;
+		font-weight: bold;
+}
+
+a.paginate_button {
+		font-size: 12px !important;
+}

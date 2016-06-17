@@ -1,0 +1,159 @@
+body,html {
+    margin: 0 5px;
+    font-family: Verdana,sans-serif;
+}
+h1 {
+    font-size: 1.4em;
+    color: #008000;
+}
+a {
+    color: #008000;
+}
+
+/* Table */
+th {
+    text-align: left;
+}
+td, th {
+    padding-right: 5px;
+}
+
+/* style form */
+form dt {
+    width: 100px;
+    display: block;
+    float: left;
+    clear: left;
+}
+form dd {
+    margin-left: 0;
+    float: left;
+    
+}
+form #submitbutton {
+   /* margin-left: 100px;*/
+    margin-left:-5px;
+    margin-right:15px;
+}
+
+/* Custom styles */
+.container-fluid{
+    max-width: 1200px;
+
+}
+.navbar .container-fluid{
+    color:white;
+}
+#content{
+    height: 100%;
+}
+.navbar .container-fluid{
+    display: flex;
+    justify-content: space-between;
+}
+.navbar ul{
+    display:flex;
+    flex:1;
+
+
+}
+.navbar ul li:last-child{
+    margin-left: auto;
+}
+.navbar::before,
+.navbar::after,
+.container-fluid::before,
+.container-fluid::after
+{
+    display:none !important;
+}
+
+#content h1{
+    text-align: center;
+}
+.col-md-6 .table>tbody>tr>td,
+.col-md-6 .table>tbody>tr>th,
+.col-md-6 .table>tfoot>tr>td,
+.col-md-6 .table>tfoot>tr>th,
+.col-md-6 .table>thead>tr>td,
+.col-md-6 .table>thead>tr>th{
+    vertical-align: middle;
+}
+
+.edit-table .text-center{
+    padding:7px;
+}
+.edit-table {
+    padding-top: 42px;
+}
+.table-options{
+    margin-bottom: 35px;
+}
+#table thead th:after
+{
+    display:none;
+}
+#table thead th{
+    cursor:auto;
+}
+.errors li{
+    list-style-type: none !important;
+    color:red !important;
+}
+th i{
+    display:block;
+    width:12px;
+    height:12px;
+    margin-left:5px;
+    font-size: 12px;
+    cursor:pointer;
+
+}
+.glyphicon-ok{
+    display:block;
+    font-size: 12px;
+}
+.form-inline select {
+    width:145px !important;
+}
+#filter{
+    width:450px;
+}
+
+.filters p{
+    margin-bottom: 20px;
+}
+
+.forms .select
+{
+    margin-right: 40px;
+}
+.flex-grid .row{
+    display:flex;
+    align-content: center;
+}
+.flex-grid .row .cell
+{
+    align-self: baseline;
+}
+.fluid .datepicker{
+
+    margin: 0.325rem 0px !important;
+}
+.flex-grid
+{
+    padding-top:30px;
+}
+a.edit-cell
+{
+    display:block;
+    color:white !important;
+    width:100%;
+    height:12px;
+}
+.edit-cell:hover
+{
+    color:#fff !important;
+}
+
+

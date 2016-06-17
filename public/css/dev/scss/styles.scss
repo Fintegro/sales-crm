@@ -1,0 +1,32 @@
+/*
+ * SMACSS + SCSS starter v2.1
+ * Inspired by SMACSS http://smacss.com
+ * Coding rules : https://github.com/necolas/idiomatic-css
+ *
+ * Author @antonashin
+ *
+ */
+
+// Site settings
+@import 'compass/reset';
+@import 'settings';
+// Utils
+@import 'utils/functions';
+@import 'utils/mixins';
+@import "utils/state";
+
+//Vendor
+
+// Base
+@import 'base/base';
+
+// General Modules
+@import "modules/login-form";
+@import "modules/dashboard";
+@import "modules/lazyLoad";
+@import "modules/tile-content";
+@import "modules/buttons";
+@import "modules/pagination";
+@import "modules/dialog";
+@import "modules/input";
+@import "modules/filters-table";

@@ -1,0 +1,37 @@
+<form method="<?php echo $this->modalData['form']->getMethod()?>" action="<?php echo $this->modalData['form']->getAction()?>" class="<?php echo $this->modalData['form']->getAttrib('class');?>" id = "<?php echo $this->modalData['form']->getAttrib('id'); ?>">
+
+    <div class="input-control modern text iconic">
+        <?php echo $this->modalData['form']->getElement('name'); ?>
+        <span class="label">Name</span>
+        <span class="informer">Please enter Name</span>
+        <span class="placeholder">Name</span>
+    </div>
+    <div class="input-control modern text iconic">
+        <?php echo $this->modalData['form']->getElement('e_mail'); ?>
+        <span class="label">E-mail</span>
+        <span class="informer">Please enter E-mail</span>
+        <span class="placeholder">E-mail</span>
+    </div>
+    <div class="input-control modern text iconic">
+        <?php echo $this->modalData['form']->getElement('phone'); ?>
+        <span class="label">Phone</span>
+        <span class="informer">Please enter Phone</span>
+        <span class="placeholder">Phone</span>
+    </div>
+    <div class="input-control modern text iconic">
+        <?php echo $this->modalData['form']->getElement('skype'); ?>
+        <span class="label">Skype</span>
+        <span class="informer">Please enter Skype</span>
+        <span class="placeholder">Skype</span>
+    </div>
+    <div class="input-control select">
+        <?php echo $this->modalData['form']->getElement('id_country'); ?>
+    </div>
+    <div class="input-control textarea">
+        <?php echo $this->modalData['form']->getElement('note'); ?>
+    </div>
+
+    <?php if(isset($this->modalData['id'])){?>
+        <input type="hidden" name="id" value="<?php echo $this->modalData['id']; ?>" />
+    <?php }?>
+</form>

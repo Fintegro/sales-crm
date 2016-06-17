@@ -1,0 +1,32 @@
+<form method="<?php echo $this->modalData['form']->getMethod()?>" action="<?php echo $this->modalData['form']->getAction()?>" class="<?php echo $this->modalData['form']->getAttrib('class'); ?>"
+id="modalForm">
+    <div class="input-control modern text iconic">
+        <?php echo $this->modalData['form']->getElement('name'); ?>
+        <span class="label">Project name</span>
+        <span class="informer">Please enter Project name</span>
+        <span class="placeholder">Project name</span>
+    </div>
+    <div class="input-control modern text iconic">
+        <?php echo $this->modalData['form']->getElement('code'); ?>
+        <span class="label">Code</span>
+        <span class="informer">Please enter Code</span>
+        <span class="placeholder">Code</span>
+    </div>
+    <div class="input-control select">
+        <?php echo $this->modalData['form']->getElement('id_client'); ?>
+    </div>
+
+    <div class="input-control textarea"
+         data-role="input" data-text-auto-resize="true" data-text-max-height="108">
+        <?php echo $this->modalData['form']->getElement('note'); ?>
+    </div>
+
+    <?php if(isset($this->modalData['id'])){?>
+        <input type="hidden" name="id" value="<?php echo $this->modalData['id']; ?>" />
+    <?php }?>
+    <?php if(!$this->edit){ ?>
+    <footer>
+        <a id="new-client" class="button primary addButton" href="<?php echo $this->url(['controller'=>$this->modalData['urlClient']['controller'],'action'=>$this->modalData['urlClient']['action']],null,true);?>">Add new client</a>
+    </footer>
+    <?php }?>
+</form>

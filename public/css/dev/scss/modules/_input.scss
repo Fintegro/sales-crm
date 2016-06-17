@@ -1,0 +1,25 @@
+/* ===========================
+   Module: Input
+   =========================== */
+
+.input-control {
+		ul.errors {
+				position: absolute;
+				bottom: -25px;
+				margin: auto;
+				width: 100%;
+		}
+}
+
+.input-control.modern {
+		margin: 30px 50px !important;
+}
+.input-control.textarea {
+		margin: .325rem 50px;
+		height: 125px !important;
+}
+
+.datepicker {
+	width: 12.25rem !important;
+	margin: 0 50px !important;
+}

@@ -1,0 +1,10 @@
+    <td>
+        <a href="<?php echo $this->url(array('controller'=>$this->escape($this->edits['edit']['controller']), 'action'=>$this->escape($this->edits['edit']['action']),'id'=>$this->escape($this->id)),null,true);?>" class="editButton toolbar-button">
+            <span class="mif-tools"></span>
+        </a>
+        </td>
+    <td>
+        <a href="<?php echo $this->url(array('controller'=>$this->escape($this->edits['delete']['controller']), 'action'=>$this->escape($this->edits['delete']['action']),'id'=>$this->escape($this->id)),null,true);?>" class="removeButton toolbar-button">
+            <span class="mif-cross"></span>
+        </a>
+    </td>

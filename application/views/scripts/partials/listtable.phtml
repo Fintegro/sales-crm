@@ -1,0 +1,64 @@
+<?php if(!empty($this->addButton)){?>
+<div class="table-options">
+    <p>
+        <a class="button loading-cube lighten primary addButton" href="<?php echo $this->url(array('controller'=>$this->addUrl['controller'],
+            'action'=>$this->addUrl['action']),null,true);?>" ><?php echo $this->addButton; ?></a>       
+    </p>
+</div>
+<?php }?>
+<div data-role="dialog" id="dialog" class="padding20 dialog" data-close-button="true" data-windows-style="true" style="left: 0; right: 0; width: auto; height: auto; visibility: hidden; top: 300px;"></div>
+
+<table id="data_table" class="dataTable striped border bordered" data-role="datatable" data-searching="true" role="grid" aria-describedby="data_table_info">
+    <thead>
+    <tr role="row">
+        <?php foreach($this->columns as $column){?>
+            <th class="sorting_desc" tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-label="Name: activate to sort column ascending"><?php echo $column?></th>
+        <?php }?>
+        <?php if(!empty($this->edits)){?>
+        <th class="sorting_desc" tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-label="Name: activate to sort column ascending">Edit</th>
+        <th class="sorting_desc" tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-label="Name: activate to sort column ascending">Delete</th>
+        <?php } ?>
+    </tr>
+    </thead>
+
+    <tfoot>
+    <tr role="row">
+        <?php foreach($this->columns as $column){?>
+            <th rowspan="1" colspan="1"><?php echo $column?></th>
+        <?php }?>        
+        <?php if(!empty($this->edits)){?>
+        <th rowspan="1" colspan="1">Edit</th>
+        <th rowspan="1" colspan="1">Delete</th>
+        <?php } ?>
+    </tr>
+    </tfoot>
+
+    <tbody id="table-body">
+
+    <?php
+    foreach ($this->rows as $row)
+    { ?>
+        <tr>
+            <?php
+
+            $currentRow = array_values($row);
+            for ($i=0;$i<count($row)-1;$i++)
+            {
+                $data=['value' => $currentRow[$i]];
+                if(isset($this->change)){
+                    $data['change']=$this->change;
+                    $data['id'] = $row['id'];
+                }
+                echo $this->partial('partials/row.phtml', $data);
+            }
+            if(!empty($this->edits))
+            {
+                echo $this->partial('partials/edits.phtml', ['edits'=>$this->edits,'id'=>$row['id']]);
+            }
+             ?>
+        </tr>
+    <?php } ?>
+
+
+    </tbody>
+</table>

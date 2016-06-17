@@ -1,0 +1,5 @@
+<h1 class="title"><?php echo $this->data['title']; ?></h1>
+<?php
+
+echo $this->partial('partials/reporttable.phtml', ['tableData'=>$this->data['tableData'],'filterForm'=>$this->data['filterForm']]);
+?>

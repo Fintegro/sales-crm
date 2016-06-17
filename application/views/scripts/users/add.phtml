@@ -1,0 +1,29 @@
+<form id="modalForm" method="<?php echo $this->modalData['form']->getMethod()?>" action="<?php echo $this->modalData['form']->getAction()?>" class="<?php echo $this->modalData['form']->getAttrib('class');?>">
+
+    <div class="input-control modern text iconic">
+        <?php echo $this->modalData['form']->getElement('username'); ?>
+        <span class="label">Your login</span>
+        <span class="informer">Please enter you login or email</span>
+        <span class="placeholder">Input login</span>
+        <span class="icon mif-user"></span>
+    </div>
+
+    <div class="input-control modern password iconic" data-role="input">
+        <?php echo $this->modalData['form']->getElement('password'); ?>
+        <span class="label">Your password</span>
+        <span class="informer">Please enter you password</span>
+        <span class="placeholder">Input password</span>
+        <span class="icon mif-lock"></span>
+        <button class="button helper-button reveal"><span class="mif-looks"></span></button>
+    </div>
+
+    <div class="input-control select">
+        <style> label{display: none} </style>
+        <?php echo $this->modalData['form']->getElement('role_id'); ?>
+    </div>
+
+    <?php if(isset($this->modalData['id'])){?>
+        <input type="hidden" name="id" value="<?php echo $this->modalData['id']; ?>" />
+    <?php }?>
+
+</form>

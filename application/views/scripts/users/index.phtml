@@ -1,0 +1,6 @@
+<h1 class="title">User list</h1>
+<?php
+    echo $this->partial('partials/listtable.phtml',['columns'=>$this->columns, 'addButton'=>$this->addButton, 'addUrl'=>$this->addUrl,
+    'rows'=>$this->rows,'edits'=>$this->edits]);
+?>
+

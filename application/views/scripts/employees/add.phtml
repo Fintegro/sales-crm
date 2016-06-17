@@ -1,0 +1,50 @@
+<form method="<?php echo $this->modalData['form']->getMethod()?>" action="<?php echo $this->modalData['form']->getAction()?>" class="<?php echo $this->modalData['form']->getAttrib('class');?>" id = "<?php echo $this->modalData['form']->getAttrib('id'); ?>">
+
+    <div class="input-control modern text iconic">
+        <?php echo $this->modalData['form']->getElement('firstName'); ?>
+        <span class="label">Name</span>
+        <span class="informer">Please enter Name</span>
+        <span class="placeholder">Name</span>
+    </div>
+    <div class="input-control modern text iconic">
+        <?php echo $this->modalData['form']->getElement('lastName'); ?>
+        <span class="label">Surname</span>
+        <span class="informer">Please enter Surname</span>
+        <span class="placeholder">Surname</span>
+    </div>
+
+    <div class="input-control modern text iconic">
+        <?php echo $this->modalData['form']->getElement('workHrs'); ?>
+        <span class="label">Work hours</span>
+        <span class="informer">Please enter Work hours</span>
+        <span class="placeholder">Work hours</span>
+    </div>
+
+    <div class="form-group">
+        <div class="input-control modern text iconic">
+            <?php echo $this->modalData['form']->getElement('price'); ?>
+            <span class="label">Salary per month</span>
+            <span class="informer">Please enter Salary per month</span>
+            <span class="placeholder">Salary per month</span>
+        </div>
+        <div class="input-control select">
+            <?php echo $this->modalData['form']->getElement('price_curr'); ?>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="input-control modern text iconic">
+            <?php echo $this->modalData['form']->getElement('effective_rate'); ?>
+            <span class="label">Minimal effective rate</span>
+            <span class="informer">Please enter effective rate</span>
+            <span class="placeholder">Effective rate</span>
+        </div>
+        <div class="input-control select">
+            <?php echo $this->modalData['form']->getElement('ts_curr'); ?>
+        </div>
+    </div>
+
+    <?php if(isset($this->modalData['id'])){?>
+        <input type="hidden" name="id" value="<?php echo $this->modalData['id']; ?>" />
+    <?php }?>
+</form>

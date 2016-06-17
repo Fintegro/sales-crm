@@ -1,0 +1,46 @@
+@mixin rhytm-config($size) {
+		$base-font-size: $size !global;
+		$base-line-height: $size * 1.5 !global;
+		$rhythm-unit: 'rem' !global;
+		$rem-with-px-fallback: false !global;
+		//$grid-background-baseline-color: lighten(#d72272, 30%) !global;
+}
+
+@mixin border($size, $color) {
+		border: $size solid $color;
+}
+
+@mixin border-top($size, $color) {
+		border-top: $size solid $color;
+}
+
+@mixin border-left($size, $color) {
+		border-left: $size solid $color;
+}
+
+@mixin border-right($size, $color) {
+		border-right: $size solid $color;
+}
+
+@mixin border-bottom($size, $color) {
+		border-bottom: $size solid $color;
+}
+
+@mixin respond-to($media) {
+		@if $media == small-screens {
+				@media only screen and (max-width: $general-small-screen) { @content; }
+		}
+		@else if $media == small-medium-screens {
+				@media only screen and (min-width: $general-small-screen + 1) and (max-width: $general-medium-screen - 1) { @content; }
+		}
+		@else if $media == medium-screens {
+				@media only screen and (max-width: $general-medium-screen) { @content; }
+		}
+		@else if $media == large-screens {
+				@media only screen and (min-width: $general-large-screen) { @content; }
+		}
+}
+
+@mixin transition($time, $property: all, $easing: ease-in) {
+	transition: $property $time $easing;
+}

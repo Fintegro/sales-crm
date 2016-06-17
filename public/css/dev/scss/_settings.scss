@@ -1,0 +1,104 @@
+// ===========================
+// SITE SETTINGS
+// ===========================
+
+//General
+$general-tablet-screen: 992px;
+$general-small-screen: 1280px;
+$general-medium-screen: 1440px;
+$general-large-screen: 1920px;
+
+$phone-portrait-screen: 320px;
+$media-tablet-portrait-screen: 768px;
+$media-tablet-screen: max-width 992px;
+$media-small-old-screen: max-width 1024px;
+$media-small-screen: max-width 1280px;
+$media-medium-screen: max-width 1440px;
+
+$general-section-padding-top: 40px;
+
+$general-text-size: 18px;
+$general-text-color: #000;
+$general-link-color: #000;
+$general-link-hover-color: #000;
+$general-orange-color: #fbba1e;
+
+
+//Background colors
+$body-background-color:                  	 	#fff;
+$body-background-alternative-color:        	#004050;
+$btn-primary-color:																														#000;
+$btn-primary-color-hover:																								#fff;
+$btn-revers-color:																																#fff;
+$btn-revers-color-hover:																										#000;
+
+
+//Font colors
+$body-color:                                     #000;
+$h1-color:                                       $general-text-color;
+$h2-color:                                       $general-text-color;
+$link-color-normal:																														$general-link-color;
+$link-color-hover:																															$general-link-hover-color;
+$link-color-active:																														$general-link-hover-color;
+$link-color-visited:																													$general-link-color;
+
+
+
+
+//Font family
+$body-font-family:                 'SegoeUI', sans-serif;
+$body-font-family-bold:            'SegoeUIBold', sans-serif;
+$body-second-font-family:										"Swiss721BoldCondensedBT", sans-serif;
+$body-third-font-family: 										"Swiss721RomanCondensed", sans-serif;
+$body-fourth-font-family: 									"swis721CNBT", sans-serif;
+
+
+
+//Font style
+
+
+//Font size
+$h1-font-size:                         3.998rem;       //~70px
+$h2-font-size:                         2.827rem;     		//
+$h3-font-size:                         1.999rem;    			//~36px
+$h4-font-size:                         1.414rem;    			//~26px
+$h5-font-size:                         1rem;    						//~18px
+$h6-font-size:                         0.707rem;    			//~
+
+
+//Border
+
+
+
+//Border radius
+
+
+
+//Border color
+$btn-primary-border-color:																									$general-link-color;
+$btn-primary-border-color-hover:																			$general-link-color;
+$our-team-border-color: 																				#fff;
+
+
+//Box shadow
+$top-navigation-box-shadow:										rgba(0, 0, 0, 0.1) 0 0 20px 0 ;
+
+
+//Text shadow
+
+
+
+//Animation
+$general-animation-speed-move-section: 0.5s;
+
+
+//Height & Line height
+
+
+
+//Width
+
+
+
+//Other (padding, margin, position)
+

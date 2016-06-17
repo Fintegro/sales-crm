@@ -1,0 +1,26 @@
+<form method="<?php echo $this->modalData['form']->getMethod()?>" action="<?php echo $this->modalData['form']->getAction()?>" class="<?php echo $this->modalData['form']->getAttrib('class');?>" id = "<?php echo $this->modalData['form']->getAttrib('id'); ?>">
+    <header>
+        <div class="input-control text datepicker" data-role="datepicker" data-scheme="darcula" data-other-days="true" data-week-start="1">
+            <?php echo $this->modalData['form']->getElement('date'); ?>
+            <button class="button"><span class="mif-calendar"></span></button>
+        </div>
+        <div class="input-control modern text iconic">
+            <?php echo $this->modalData['form']->getElement('exchange_rate'); ?>
+            <span class="label">Exchange rate</span>
+            <span class="informer">Please enter Exchange rate</span>
+            <span class="placeholder">Exchange rate</span>
+        </div>
+    </header>
+    <footer>
+        <div class="input-control select">
+            <?php echo $this->modalData['form']->getElement('first_currency'); ?>
+        </div>
+        <div class="input-control select">
+            <?php echo $this->modalData['form']->getElement('second_currency'); ?>
+        </div>
+    </footer>
+
+    <?php if(isset($this->modalData['id'])){?>
+        <input type="hidden" name="id" value="<?php echo $this->modalData['id']; ?>" />
+    <?php }?>
+</form>

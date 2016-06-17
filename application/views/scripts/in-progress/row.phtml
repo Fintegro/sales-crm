@@ -1,0 +1,10 @@
+
+    <?php
+    foreach ($this->row['tableData'] as $key=>$value)
+    {
+        echo '<td ><a class="edit-cell" style="display:block;    
+    width:100%;
+    height:12px;" href="'.(new Zend_View_Helper_Url())->url(array('controller'=>'in-progress','action' => 'edit-cell',
+                'edit'=>$key,'id'=>$this->row['id']),null,true).'">'. $value.'</a></td>';
+    }
+    ?>

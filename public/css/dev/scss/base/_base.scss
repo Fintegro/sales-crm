@@ -1,0 +1,89 @@
+/* ===========================
+   Base
+   =========================== */
+// COMPASS
+@import 'compass/typography/vertical_rhythm';
+@import 'compass/css3';
+@import 'compass/typography/links';
+//link-colors($normal, $hover, $active, $visited, $focus)
+@import "compass/utilities/general/clearfix";
+
+// GENERAL STYLE
+@include rhytm-config($general-text-size);
+@include establish-baseline;
+
+::-webkit-scrollbar {
+		width: 0;
+}
+
+.disable-hover,
+.disable-hover * {
+		pointer-events: none !important;
+}
+
+body {
+		background: $body-background-alternative-color;
+}
+
+a {
+		@include link-colors($link-color-normal, $link-color-hover, $link-color-active, $link-color-visited);
+		outline: none;
+		text-decoration: none;
+}
+
+em {
+		font-style: italic;
+}
+
+strong {
+		font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, h6 {
+		margin: 8px 0 16px;
+		padding: 0;
+}
+
+h1 {
+		@include adjust-font-size-to($h1-font-size, 3);
+		margin: 16px 0 32px 0;
+		color: $h1-color;
+		letter-spacing: 1px;
+		font-family: $body-second-font-family;
+}
+
+h2 {
+		@include adjust-font-size-to($h2-font-size, 2);
+		color: $h2-color;
+		letter-spacing: 1px;
+		margin: 0 0 16px;
+}
+
+h3 {
+		@extend h2;
+		@include adjust-font-size-to($h3-font-size, 2);
+}
+
+h4 {
+		@extend h2;
+		@include adjust-font-size-to($h4-font-size, 1);
+}
+
+h5 {
+		@extend h2;
+		@include adjust-font-size-to($h5-font-size, 1);
+}
+
+h6 {
+		@extend h2;
+		@include adjust-font-size-to($h6-font-size, 1);
+}
+
+ul, ol {
+		@include margin-trailer;
+}
+
+.span3 {
+	width: 25%;
+	float: left;
+}

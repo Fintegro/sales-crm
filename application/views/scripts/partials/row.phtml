@@ -1,0 +1,12 @@
+<td >
+    <?php 
+    if(isset($this->change) && in_array($this->value,$this->change['statuses']) ) {?>
+        <a href="<?php echo $this->url(array('controller'=>$this->change['controller'], 'action'=>$this->change['action'],'id'=>$this->id),null,true);?>" class="editButton toolbar-button"
+         style="color:white; font-size:12px; text-align: left; ">
+            <?php echo $this->escape($this->value);  ?>
+        </a>
+    <?php } else {
+        echo $this->escape($this->value);
+    } ?>
+    
+</td>

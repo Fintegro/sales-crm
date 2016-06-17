@@ -1,0 +1,77 @@
+<?php echo $this->partial($this->formName.'.phtml', ['filterForm'=>$this->filterForm]);?>
+
+<div data-role="dialog" id="dialog" class="padding20 dialog" data-close-button="true" data-windows-style="true" style="left: 0; right: 0; width: auto; height: auto; visibility: hidden; top: 300px;"></div>
+
+<table id="data_table" class="dataTable striped border bordered" data-role="datatable" data-searching="true" role="grid" aria-describedby="data_table_info">
+    <thead>
+    <tr role="row">
+
+        <?php $secondRow = [];
+        foreach($this->tableData['columns'] as $column){ ?>
+            <th class="sorting_desc"   rowspan="<?php
+                if(is_array($column))
+                {
+                    echo '1';
+                }else
+                {
+                    echo '2';
+                }
+            ?>"
+            colspan="<?php
+            if(is_array($column))
+            {
+                echo count(array_values($column)[0]);
+            }else
+            {
+                echo '1';
+            }
+            ?>"aria-label="Name: activate to sort column ascending">
+                <?php
+                if(is_array($column)){
+                    $secondRow = array_merge($secondRow, array_values($column)[0]);                   
+                    echo array_keys($column)[0];
+                }
+                else{echo $column; }
+                ?>
+            </th>
+        <?php }?>
+    </tr>
+    <?php if(!empty($secondRow)){ ?>
+        <tr>
+        <?php foreach($secondRow as $cell){
+
+         echo '<th>'. $cell . '</th>';
+         }?>
+        </tr>
+    <?php }?>
+    </thead>
+
+    <!--<tfoot>
+    <tr role="row">
+        <?php /*foreach($this->tableData['columns'] as $column){*/?>
+            <th rowspan="1" colspan="1"><?php echo $column?></th>
+        <?php /*}*/?>
+
+    </tr>
+    </tfoot>-->
+
+    <tbody id="table-body">
+
+    <?php
+    foreach ($this->tableData['rows'] as $row)
+    {
+        if(!isset($row['total_hours']))
+        {
+            echo $this->partial('partials/reportrow.phtml', ['row'=>$row]);
+        }
+        else
+        {
+            echo $this->partial('work-done/totalrow.phtml', ['total'=>$row['total_hours']]);
+        }       
+        
+
+    } ?>
+    
+
+    </tbody>
+</table>

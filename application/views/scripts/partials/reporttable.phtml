@@ -1,0 +1,58 @@
+<?php if(!empty($this->filterForm)){?>
+<div class="table-options filters">
+    <p>Filter by: </p>
+    <div class="forms">
+        <form method="<?php echo $this->filterForm->getMethod(); ?>" action="<?php echo $this->filterForm->getAction()?>"
+              class="<?php echo $this->filterForm->getAttrib('class');?>" id="table_filter">
+            <div class="grid fluid">
+                <div class="row">
+                    <div class="span3">
+                        <?php echo $this->filterForm->getElement('currency')->getLabel();?>
+                        <div class="input-control select">
+                            <?php echo $this->filterForm->getElement('currency'); ?>
+                        </div>
+                    </div>
+                    <div class="span3">
+                        <?php echo $this->filterForm->getElement('clients')->getLabel();?> <br>
+                        <div class="input-control select">
+                            <?php echo $this->filterForm->getElement('clients'); ?>
+                        </div>
+                    </div>
+                    <div class="span3"><?php echo $this->filterForm->getElement('balance')->getLabel();?>
+                        <div class="input-control select">
+                            <?php echo $this->filterForm->getElement('balance'); ?>
+                        </div>
+                    </div>
+                    <div class="span3"><?php echo $this->filterForm->getElement('submit'); ?></div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<?php }?>
+<div data-role="dialog" id="dialog" class="padding20 dialog" data-close-button="true" data-windows-style="true" style="left: 0; right: 0; width: auto; height: auto; visibility: hidden; top: 300px;"></div>
+
+<table id="data_table" class="dataTable striped border bordered" data-role="datatable" data-searching="true" role="grid" aria-describedby="data_table_info">
+    <thead>
+    <tr role="row">
+        <?php foreach($this->tableData['columns'] as $column){?>
+            <th class="sorting_desc" tabindex="0" aria-controls="data_table" rowspan="1" colspan="1" aria-label="Name: activate to sort column ascending"><?php echo $column?></th>
+        <?php }?>
+    </tr>
+    </thead>
+    <tfoot>
+    <tr role="row">
+        <?php foreach($this->tableData['columns'] as $column){?>
+            <th rowspan="1" colspan="1"><?php echo $column?></th>
+        <?php }?>
+
+    </tr>
+    </tfoot>
+    <tbody id="table-body">
+    <?php
+    foreach ($this->tableData['rows'] as $row) {
+        echo $this->partial('partials/reportrow.phtml', ['row' => $row]);
+
+    } ?>
+    </tbody>
+</table>

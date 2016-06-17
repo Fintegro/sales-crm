@@ -1,0 +1,13 @@
+
+<div class="row">
+    <div class="col-md-12 ">
+        <p><?php echo $this->escape($this->modalData['confirmMessage']); ?></p>
+        <form id="delete" action="<?php echo $this->url(array('controller'=>$this->modalData['url']['controller'],'action'=>$this->modalData['url']['action']),null,true); ?>" method="post">
+            <div>
+                <input type="hidden" name="id" value="<?php echo $this->escape($this->modalData['id']); ?>" />
+                <!--<input class="btn btn-default" type="submit" name="del" value="Yes" />
+                <input class="btn btn-default" type="submit" name="del" value="No" /> -->
+            </div>
+        </form>
+    </div>
+</div>
